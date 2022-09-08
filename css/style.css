@@ -1,0 +1,556 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Creating Font Family */
+@font-face {
+  font-family: circular-black;
+  src: url(../assets/fonts/Circular/CircularStd-Black.otf);
+}
+@font-face {
+  font-family: circular-bold;
+  src: url(../assets/fonts/Circular/CircularStd-Bold.otf);
+}
+@font-face {
+  font-family: circular-book;
+  src: url(../assets/fonts/Circular/CircularStd-Book.otf);
+}
+@font-face {
+  font-family: circular-light;
+  src: url(../assets/fonts/Circular/CircularStd-Light.otf);
+}
+@font-face {
+  font-family: circular-medium;
+  src: url(../assets/fonts/Circular/CircularStd-Medium.otf);
+}
+body {
+  font-family: circular-bold;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #121212;
+  overflow-x: hidden;
+}
+
+.leftcontent {
+  width: 12.8%;
+  height: 88vh;
+  background-color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.leftcontent .brand {
+  width: 90%;
+  margin: 24.2px 0;
+  margin-left: 10%;
+  padding: 0;
+}
+.leftcontent .brand a svg {
+  width: 118px;
+  color: white;
+}
+.leftcontent ul {
+  width: 89%;
+  height: 47vh;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.leftcontent ul .home span {
+  color: white;
+}
+.leftcontent ul li {
+  width: 100%;
+  height: 30px;
+  color: rgb(179, 179, 179);
+  list-style-type: none;
+  margin: 17px 0;
+  font-size: 12px;
+}
+.leftcontent ul li a {
+  text-decoration: none;
+  color: rgb(179, 179, 179);
+}
+.leftcontent ul li i {
+  font-size: 20px;
+}
+.leftcontent ul li i:hover, .leftcontent ul li span:hover {
+  color: white;
+}
+.leftcontent ul li span {
+  padding-left: 13px;
+}
+.leftcontent .create {
+  margin-top: 35px;
+}
+.leftcontent .links {
+  width: 90%;
+  margin-left: 10%;
+  position: absolute;
+  bottom: 0;
+}
+.leftcontent .links a {
+  color: rgb(179, 179, 179);
+  text-decoration: none;
+  font-size: 10px;
+  display: block;
+  margin: 10px 0;
+  font-family: circular-light;
+}
+.leftcontent .links a:hover {
+  text-decoration: underline;
+}
+
+.rightcontent {
+  width: 87.2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rightcontent .login-header {
+  width: 100%;
+  height: 64px;
+  background-color: #090909;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.rightcontent .login-header .content {
+  width: 96%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rightcontent .login-header .content .left {
+  width: 50%;
+  margin: auto 0;
+}
+.rightcontent .login-header .content .left button {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  background-color: #050505;
+  border-radius: 100%;
+  border-color: none;
+  cursor: pointer;
+  font-family: circular-light;
+  margin: auto 6px;
+}
+.rightcontent .login-header .content .left button span {
+  color: rgb(139, 139, 139);
+  font-size: 30px;
+  font-weight: 100;
+}
+.rightcontent .login-header .content .right {
+  width: 50%;
+  margin: auto 0;
+  text-align: right;
+}
+.rightcontent .login-header .content .right button {
+  width: 110px;
+  height: 48px;
+  margin: auto 0;
+  border-radius: 30px;
+  font-family: circular-bold;
+  border: none;
+}
+.rightcontent .login-header .content .right button a {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+}
+.rightcontent .login-header .content .right button:hover {
+  transform: scale(1.05);
+}
+.rightcontent .login-header .content .right .btn1 {
+  background: none;
+}
+.rightcontent .login-header .content .right .btn1 a {
+  color: #a7a7a7;
+}
+.rightcontent .login-header .content .right .btn1:hover a {
+  color: white;
+}
+.rightcontent .playlist {
+  margin-top: 36px;
+}
+.rightcontent .mood {
+  margin-bottom: 170px;
+}
+.rightcontent .customclassadd {
+  display: none;
+}
+.rightcontent .playlist, .rightcontent .focus, .rightcontent .mood {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #121212;
+  margin-top: 10px;
+}
+.rightcontent .playlist .content, .rightcontent .focus .content, .rightcontent .mood .content {
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rightcontent .playlist .content .title, .rightcontent .focus .content .title, .rightcontent .mood .content .title {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: space-around;
+  margin: auto 0;
+}
+.rightcontent .playlist .content .title .left, .rightcontent .focus .content .title .left, .rightcontent .mood .content .title .left {
+  width: 50%;
+  margin: auto 0;
+}
+.rightcontent .playlist .content .title .left h1, .rightcontent .focus .content .title .left h1, .rightcontent .mood .content .title .left h1 {
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+}
+.rightcontent .playlist .content .title .right, .rightcontent .focus .content .title .right, .rightcontent .mood .content .title .right {
+  width: 50%;
+  text-align: right;
+  margin: auto 0;
+}
+.rightcontent .playlist .content .title .right button, .rightcontent .focus .content .title .right button, .rightcontent .mood .content .title .right button {
+  font-family: circular-bold;
+  color: #B3B3B3;
+  background: none;
+  border: none;
+}
+.rightcontent .playlist .content .title .right button:hover, .rightcontent .focus .content .title .right button:hover, .rightcontent .mood .content .title .right button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.rightcontent .playlist .content .cards-sec, .rightcontent .focus .content .cards-sec, .rightcontent .mood .content .cards-sec {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+  width: 11.5%;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #181818;
+  position: relative;
+  margin: 20px 0;
+}
+.rightcontent .playlist .content .cards-sec .card img, .rightcontent .focus .content .cards-sec .card img, .rightcontent .mood .content .cards-sec .card img {
+  width: 82%;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+.rightcontent .playlist .content .cards-sec .card button, .rightcontent .focus .content .cards-sec .card button, .rightcontent .mood .content .cards-sec .card button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4CD251;
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transition-duration: 0.1s;
+  visibility: hidden;
+}
+.rightcontent .playlist .content .cards-sec .card button:hover, .rightcontent .focus .content .cards-sec .card button:hover, .rightcontent .mood .content .cards-sec .card button:hover {
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+.rightcontent .playlist .content .cards-sec .card a, .rightcontent .focus .content .cards-sec .card a, .rightcontent .mood .content .cards-sec .card a {
+  text-decoration: none;
+  color: white;
+}
+.rightcontent .playlist .content .cards-sec .card a h4, .rightcontent .focus .content .cards-sec .card a h4, .rightcontent .mood .content .cards-sec .card a h4 {
+  width: 80%;
+  margin: 0 auto 5px auto;
+  text-align: left;
+  font-size: 16px;
+}
+.rightcontent .playlist .content .cards-sec .card p, .rightcontent .focus .content .cards-sec .card p, .rightcontent .mood .content .cards-sec .card p {
+  width: 80%;
+  color: #A7A7A7;
+  font-size: 13px;
+  text-align: left;
+  margin: 0 auto;
+  line-height: 22px;
+}
+.rightcontent .playlist .content .cards-sec .card:hover, .rightcontent .focus .content .cards-sec .card:hover, .rightcontent .mood .content .cards-sec .card:hover {
+  background-color: #282828;
+  transition: 0.7s;
+}
+.rightcontent .playlist .content .cards-sec .card:hover button, .rightcontent .focus .content .cards-sec .card:hover button, .rightcontent .mood .content .cards-sec .card:hover button {
+  visibility: visible;
+  transform: translateY(-20px);
+  transition: 0.2s;
+}
+
+footer {
+  width: 100%;
+  height: 12vh;
+  background-color: #181818;
+  position: fixed;
+  bottom: 0;
+}
+footer .content {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: space-evenly;
+}
+footer .content .box-1 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+footer .content .box-1 i {
+  margin: 20px 16px;
+  color: #5E5E5E;
+}
+footer .content .box-2 {
+  width: 100%;
+  text-align: center;
+}
+footer .content .box-2 h4, footer .content .box-2 hr {
+  display: inline-block;
+  color: #5E5E5E;
+}
+footer .content .box-2 hr {
+  width: 60%;
+  text-align: center;
+  background-color: #5E5E5E;
+  height: 4px;
+  border: 1px;
+}
+footer .content .right {
+  width: 40%;
+}
+footer .content .right svg {
+  color: black;
+}
+
+.createplaylistbox, .likedsongsbox {
+  width: 322px;
+  height: 160px;
+  background-color: #0D72EA;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 245px;
+  left: 170px;
+  z-index: 1000;
+  display: none;
+}
+.createplaylistbox .up, .likedsongsbox .up {
+  width: 90%;
+  text-align: left;
+  margin: 0 auto;
+}
+.createplaylistbox .up h3, .likedsongsbox .up h3 {
+  margin-top: 10px;
+}
+.createplaylistbox .up p, .likedsongsbox .up p {
+  font-size: 15px;
+  font-family: "circular-light";
+  font-weight: 100;
+  margin-top: 10px;
+}
+.createplaylistbox .down, .likedsongsbox .down {
+  width: 100%;
+  text-align: right;
+}
+.createplaylistbox .down button, .likedsongsbox .down button {
+  width: 110px;
+  height: 48px;
+  margin: auto 0;
+  border-radius: 30px;
+  font-family: circular-bold;
+  border: none;
+  cursor: pointer;
+}
+.createplaylistbox .down button a, .likedsongsbox .down button a {
+  text-decoration: none;
+  color: black;
+}
+.createplaylistbox .down .notbutton, .likedsongsbox .down .notbutton {
+  background: none;
+  color: white;
+}
+
+.likedsongsbox {
+  position: absolute;
+  top: 300px;
+  left: 250px;
+  display: block;
+}
+
+@media (max-width: 1700px) {
+  .leftcontent {
+    width: 14%;
+  }
+  .leftcontent .brand a svg {
+    width: 130px;
+  }
+  .rightcontent {
+    width: 86%;
+  }
+  .rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+    width: 16%;
+  }
+}
+@media (max-width: 1600px) {
+  .leftcontent {
+    width: 16%;
+  }
+  .rightcontent {
+    width: 84%;
+  }
+  .rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+    width: 15%;
+  }
+}
+@media (max-width: 1510px) {
+  .rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+    width: 18.5%;
+  }
+}
+@media (max-width: 1300px) {
+  .leftcontent {
+    width: 19%;
+  }
+  .rightcontent {
+    width: 81%;
+  }
+  .rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+    width: 23%;
+  }
+}
+@media (max-width: 1080px) {
+  .leftcontent {
+    width: 23%;
+  }
+  .rightcontent {
+    width: 77%;
+  }
+  .rightcontent .playlist .content, .rightcontent .focus .content, .rightcontent .mood .content {
+    width: 92%;
+  }
+}
+@media (max-width: 978px) {
+  .leftcontent {
+    width: 25%;
+  }
+  .rightcontent {
+    width: 75%;
+  }
+  .rightcontent .playlist .content, .rightcontent .focus .content, .rightcontent .mood .content {
+    width: 96%;
+  }
+  .rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+    width: 32%;
+  }
+}
+@media (max-width: 778px) {
+  .leftcontent {
+    width: 32%;
+  }
+  .rightcontent {
+    width: 68%;
+  }
+  .rightcontent .playlist .content, .rightcontent .focus .content, .rightcontent .mood .content {
+    width: 92%;
+  }
+  .rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+    width: 49%;
+  }
+}
+@media (max-width: 763px) {
+  .leftcontent {
+    width: 40%;
+  }
+  .rightcontent {
+    width: 60%;
+  }
+  .rightcontent .login-header .content .left {
+    width: 30%;
+  }
+  .rightcontent .login-header .content .right {
+    width: 70%;
+  }
+  .rightcontent .login-header .content .right button {
+    width: 80px;
+    height: 40px;
+  }
+  .rightcontent .playlist .content, .rightcontent .focus .content, .rightcontent .mood .content {
+    width: 90%;
+  }
+  .rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+    width: 47%;
+  }
+}
+@media (max-width: 650px) {
+  .rightcontent .playlist .content, .rightcontent .focus .content, .rightcontent .mood .content {
+    width: 90%;
+  }
+  .rightcontent .playlist .content .cards-sec .card, .rightcontent .focus .content .cards-sec .card, .rightcontent .mood .content .cards-sec .card {
+    width: 90%;
+  }
+  footer .content {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .rightcontent .login-header .content .left {
+    width: 20%;
+  }
+  .rightcontent .login-header .content .left button {
+    width: 20px;
+    height: 10px;
+    margin: auto 0;
+  }
+  .rightcontent .login-header .content .left button span {
+    font-size: 20px;
+  }
+  .rightcontent .login-header .content .right {
+    width: 80%;
+  }
+  .rightcontent .login-header .content .right button {
+    width: 60px;
+    height: 30px;
+    border-radius: 16px;
+  }
+  .rightcontent .login-header .content .right button a {
+    font-size: 13px;
+  }
+  .rightcontent .playlist .content .title .left, .rightcontent .mood .content .title .left, .rightcontent .focus .content .title .left {
+    width: 70%;
+  }
+  .rightcontent .playlist .content .title .left h1, .rightcontent .mood .content .title .left h1, .rightcontent .focus .content .title .left h1 {
+    font-size: 15px;
+  }
+  .rightcontent .playlist .content .title .right, .rightcontent .mood .content .title .right, .rightcontent .focus .content .title .right {
+    width: 30%;
+  }
+  .rightcontent .playlist .content .title .right button, .rightcontent .mood .content .title .right button, .rightcontent .focus .content .title .right button {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=style.css.map */
